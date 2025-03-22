@@ -31,8 +31,8 @@ body {
   letter-spacing: 5.6rem;
   font-family: "Archivo", sans-serif;
   font-weight: 750;
-  background: rgb(110, 172, 218);
   background: radial-gradient(circle, #8b5dff 0%, #563a9c 100%, #8b5dff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -51,8 +51,8 @@ body {
   letter-spacing: 1.3rem;
   transition: opacity 0.2s ease-out;
   font-family: "Archivo", sans-serif;
-  background: rgb(110, 172, 218);
   background: radial-gradient(circle, #8b5dff 0%, #563a9c 100%, #8b5dff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeDown 1.2s ease-in-out forwards;
@@ -144,7 +144,7 @@ body {
 
 .about-left h3 span {
   background: linear-gradient(90deg, #563a9c, #8b5dff);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -195,7 +195,7 @@ body {
 
 .Professional {
   background: linear-gradient(90deg, #8b5dff, #563a9c);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

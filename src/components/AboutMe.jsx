@@ -38,7 +38,7 @@ const AboutMe = () => {
 
         {/* Center Column: Circular Image */}
         <div className="about-center">
-          <img src="src/components/IMG_5794.JPG" alt="Profile" />
+          <img src="./IMG_5794.JPG" alt="Profile" />
         </div>
 
         {/* Right Column: Skills */}

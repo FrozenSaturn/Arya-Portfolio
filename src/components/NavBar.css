@@ -1,0 +1,76 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff7d1;
+  color: black !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  font-family: "Geologica", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #563a9c; /* Match your theme's primary text color */
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.nav-btn {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.proj {
+  background-color: rgba(107, 66, 194, 0.3);
+  color: rgb(4, 3, 22);
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.5rem 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
+.proj:hover {
+  transform: translateY(-2px);
+}
+
+.cont {
+  background-color: rgb(138, 92, 255);
+  color: rgb(4, 3, 22);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+.cont:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 2rem rgb(138, 92, 255);
+}

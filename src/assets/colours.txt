@@ -1,0 +1,9 @@
+Dark - "021526"
+lighter = "03346E"
+lighter = "6EACDA"
+Lightest = "E2E2B6"
+
+
+  font-family: "Archivo", sans-serif;
+  background: linear-gradient(90deg, #03346e, #6eacda);
+  @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");

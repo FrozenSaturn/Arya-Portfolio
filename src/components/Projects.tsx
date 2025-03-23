@@ -40,7 +40,7 @@ const Projects = () => {
         <div className="project-card">
           {/* Replace project-icon with an <img> */}
           <img
-            src="src/components/Screenshot 2025-03-23 at 12.52.10 AM.png"
+            src="public/images/Screenshot 2025-03-23 at 12.52.10 AM.png"
             alt="Project One"
             className="project-image"
           />
@@ -57,7 +57,7 @@ const Projects = () => {
         {/* Project 2 Card */}
         <div className="project-card">
           <img
-            src="src/components/Screenshot 2025-03-23 at 1.47.12 PM.png"
+            src="public/images/Screenshot 2025-03-23 at 1.47.12 PM.png"
             alt="Project Two"
             className="project-image"
           />
@@ -74,7 +74,7 @@ const Projects = () => {
         {/* Project 3 Card */}
         <div className="project-card">
           <img
-            src="src/components/Screenshot 2025-03-23 at 2.40.17 PM.png"
+            src="public/images/Screenshot 2025-03-23 at 2.40.17 PM.png"
             alt="Project Three"
             className="project-image"
           />

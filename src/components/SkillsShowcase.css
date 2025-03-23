@@ -1,0 +1,99 @@
+.skills-section {
+  background-color: #fff7d1; /* Match your portfolio's main background */
+  color: #563a9c; /* Text color consistent with your theme */
+  padding: 4rem 10%;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
+}
+
+/* Title & Subtitle */
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.skills-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 200px; /* Default height for blocks; can vary by block size */
+  gap: 1rem;
+}
+
+/* Shared styling for each skill block */
+.skill-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: #fff7d1; /* White text inside the blocks */
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Example background colors for variety */
+.large-block {
+  background-color: #8b5dff; /* Purple accent from your theme */
+}
+.medium-block {
+  background-color: #563a9c; /* Darker purple from your theme */
+}
+.small-block {
+  background-color: #3a2a75; /* Even darker or alternate shade */
+}
+
+/* Example block sizing in the grid */
+.large-block {
+  grid-column: span 6; /* Takes 6 columns wide out of 12 */
+}
+.medium-block {
+  grid-column: span 4; /* Takes 4 columns wide */
+}
+.small-block {
+  grid-column: span 2; /* Takes 2 columns wide */
+}
+
+
+/****************************************
+  Responsive Adjustments
+*****************************************/
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .large-block {
+    grid-column: span 6;
+  }
+  .medium-block {
+    grid-column: span 3;
+  }
+  .small-block {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+  .large-block,
+  .medium-block,
+  .small-block {
+    grid-column: span 1; /* All blocks take the full width in a single column */
+  }
+  .skill-block {
+    margin-bottom: 1rem;
+    height: auto; /* Let them grow as needed for text */
+  }
+}

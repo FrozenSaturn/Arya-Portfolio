@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import SkillsShowcase from "./components/SkillsShowcase";
+import Contact from "./components/Contact";
+
 import "./index.css";
 
 const App: React.FC = () => {
@@ -38,6 +42,9 @@ const App: React.FC = () => {
       <Hero scrollPos={scrollPos} scrollToNext={scrollToAboutMe} />
       <section ref={aboutMeRef}>
         <AboutMe />
+        <Projects />
+        <SkillsShowcase />
+        <Contact />
       </section>
     </div>
   );

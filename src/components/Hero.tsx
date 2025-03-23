@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ scrollPos, scrollToNext }) => {
       </h1>
       {/* New line of text under your name */}
       <h2 className="hero-subtitle" style={{ opacity: heroOpacity }}>
-        Web developer and AIML Engineer
+        WEB DEVELOPER AND AIML ENGINEER
       </h2>
       <div className="scroll-down" style={{ opacity: heroOpacity }}>
         <span className="arrow">˅</span>

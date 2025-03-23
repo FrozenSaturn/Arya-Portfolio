@@ -1,0 +1,166 @@
+.projects-section {
+  background-color: #fff7d1; /* same background as your site */
+  color: black;
+  padding: 4rem 10%;
+  font-family: "Archivo", sans-serif; /* or your chosen font */
+  text-align: center; /* center the title, but the cards themselves can align left if you prefer */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.projects-title span {
+  background: radial-gradient(circle, #8b5dff 0%, #563a9c 100%, #8b5dff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Optional underline effect on hover for the section title */
+.projects-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: #8b5dff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.projects-title:hover::after {
+  transform: scaleX(1);
+}
+
+/* Container for the three project cards */
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem; /* space between cards */
+  margin-top: 0.5rem;
+  perspective: 1000px;
+}
+
+/* Individual card styling */
+.project-card {
+  background-color: rgba(
+    138,
+    92,
+    255,
+    0.05
+  ); /* a slightly lighter shade for contrast */
+  border-radius: 8px;
+  flex: 1; /* each card expands to fill available space */
+  min-width: 20rem; /* ensures the card doesn't get too narrow */
+  max-width: 300px; /* or 350px, etc. */
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* so text inside is left-aligned */
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease; /* Add box-shadow to base transition */
+  opacity: 0;
+  transform: translateY(20px) rotateX(15deg);
+}
+
+.projects-section.visible .project-card {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.15s ease; /* Faster transition for hover */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: slightly round corners */
+  margin-bottom: 1rem; /* Space below the image */
+  object-fit: cover; /* Ensures the image is cropped properly if container is fixed */
+}
+
+/* Icon or image container */
+.project-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #8b5dff;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Card title */
+.project-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Description text */
+.project-description {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Link or button for "View Project" */
+.project-link {
+  display: inline-block;
+  background-color: #8b5dff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #563a9c;
+}
+
+/****************************************
+  Responsive Adjustments
+*****************************************/
+@media (max-width: 992px) {
+  .projects-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+}

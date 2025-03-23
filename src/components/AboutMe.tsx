@@ -1,46 +1,15 @@
-import { useRef, useEffect, useState } from "react";
 import "../index.css"; // or a separate AboutMe.css if you prefer
 
 const AboutMe = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (sectionRef.current) {
-            observer.unobserve(sectionRef.current); // Stop observing after it becomes visible
-          }
-          console.log("AboutMe section is visible:", isVisible);
-        }
-      },
-      {
-        threshold: 0.1, // Trigger when 10% of the section is visible
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <section className="about-me" ref={sectionRef}>
-      <h2 className={`about-me-title ${isVisible ? "animated" : ""}`}>
+    <section className="about-me">
+      <h2 className="about-me-title">
         <span>ABOUT ME</span>
       </h2>
 
       <div className="about-me-content">
         {/* Left Column */}
-        <div className={`about-left ${isVisible ? "animated" : ""}`}>
+        <div className="about-left">
           <h3>
             Arya <span>Bhattacharjee</span>
           </h3>
@@ -66,12 +35,12 @@ const AboutMe = () => {
         </div>
 
         {/* Center Column: Circular Image */}
-        <div className={`about-center ${isVisible ? "animated" : ""}`}>
-          <img src="/images/IMG_5794.JPG" alt="Profile" />
+        <div className="about-center">
+          <img src="src/components/IMG_5794.JPG" alt="Profile" />
         </div>
 
         {/* Right Column: Skills */}
-        <div className={`about-right ${isVisible ? "animated" : ""}`}>
+        <div className="about-right">
           <h3>
             My <span className="Professional">Professional</span> Skills
           </h3>

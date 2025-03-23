@@ -1,5 +1,7 @@
 import "../index.css"; // or a separate AboutMe.css if you prefer
 
+import dispic from "/images/IMG_5794.JPG";
+
 const AboutMe = () => {
   return (
     <section className="about-me">
@@ -36,7 +38,7 @@ const AboutMe = () => {
 
         {/* Center Column: Circular Image */}
         <div className="about-center">
-          <img src="src/components/IMG_5794.JPG" alt="Profile" />
+          <img src={dispic} alt="Profile" />
         </div>
 
         {/* Right Column: Skills */}

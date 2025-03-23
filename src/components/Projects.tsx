@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import "./Projects.css";
+import pic1 from "/images/Screenshot 2025-03-23 at 1.47.12 PM.png";
+import pic2 from "/images/Screenshot 2025-03-23 at 2.40.17 PM.png";
+import pic3 from "/images/Screenshot 2025-03-23 at 12.52.10 AM.png";
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,11 +42,7 @@ const Projects = () => {
         {/* Project 1 Card */}
         <div className="project-card">
           {/* Replace project-icon with an <img> */}
-          <img
-            src="public/images/Screenshot 2025-03-23 at 12.52.10 AM.png"
-            alt="Project One"
-            className="project-image"
-          />
+          <img src={pic3} alt="Project One" className="project-image" />
           <h3 className="project-card-title">ESG Sentiment</h3>
           <p className="project-description">
             Predict the stock market on basis of ESG News. Made using Streamlit,
@@ -56,11 +55,7 @@ const Projects = () => {
 
         {/* Project 2 Card */}
         <div className="project-card">
-          <img
-            src="public/images/Screenshot 2025-03-23 at 1.47.12 PM.png"
-            alt="Project Two"
-            className="project-image"
-          />
+          <img src={pic1} alt="Project Two" className="project-image" />
           <h3 className="project-card-title">FitCoin</h3>
           <p className="project-description">
             Get rewarded for your hard workouts with discount coupons and
@@ -73,11 +68,7 @@ const Projects = () => {
 
         {/* Project 3 Card */}
         <div className="project-card">
-          <img
-            src="public/images/Screenshot 2025-03-23 at 2.40.17 PM.png"
-            alt="Project Three"
-            className="project-image"
-          />
+          <img src={pic2} alt="Project Three" className="project-image" />
           <h3 className="project-card-title">ReportIt</h3>
           <p className="project-description">
             Report your workspace experience to help others and yourself. Made

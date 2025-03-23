@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
+    "env": "^0.0.2",
     "framer-motion": "^12.5.0",
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
